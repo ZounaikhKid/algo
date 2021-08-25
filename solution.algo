@@ -1,0 +1,34 @@
+ALGORITHM problem2
+VAR
+    set1: ARRAY_OF INTEGER;
+    set2: ARRAY_OF INTEGER;
+    i,j:INTEGER;
+sum =0; 
+BEGIN
+FOR i FROM 0 TO set1.length-1 STEP 1  DO
+j=0;
+    WHILE ( j<set2.length) DO 
+    
+   
+        IF (set1[i]==set2[j]) THEN
+           
+            sum:= sum+set1[i]
+        END_IF
+        j++
+     END_WHILE
+END_FOR
+FOR j FROM 0 TO set2.length-1 STEP 1  DO
+i=0;
+ 
+    WHILE ( i<set1.length) DO 
+    
+   
+        IF (set2[j]==set1[i]) THEN
+           
+            sum:= sum+set2[j]
+        END_IF
+        i++
+     END_WHILE
+    
+END_FOR
+END
